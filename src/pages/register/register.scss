@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.register {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+
+    .register-left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        .register-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid silver;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+
+            h1 {
+                font-size: 2.5rem;
+                font-style: italic;
+                color: goldenrod;
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+                width: 100%;
+
+                label {
+                    font-size: 1.2rem;
+                    font-style: italic;
+                    color: goldenrod;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 12px;
+                    border: none;
+                    border-radius: 5px;
+                    outline: none;
+                    font-size: 1rem;
+                    background-color: rgb(218, 213, 213);
+                }
+
+                button {
+                    padding: 10px 20px;
+                    background-color: black;
+                    color: gold;
+                    border: 2px solid gold;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    background-color: gold;
+                    color: black;
+                }
+            }
+
+            .register-back {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                span {
+                    font-size: 1rem;
+                    font-style: italic;
+                    font-weight: bold;
+                    color: silver;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-style: italic;
+                    color: goldenrod;
+                }
+
+                a:hover {
+                    color: silver;
+                }
+            }
+
+            .go-back {
+                a {
+                    font-size: 1.3rem;
+                    font-style: italic;
+                    text-decoration: none;
+                    margin-top: 20px;
+                    color: goldenrod;
+                }
+
+                a:hover {
+                    color: silver;
+                }
+            }
+        }
+    }
+
+    .register-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        .register-image {
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            transform: scale(0.8);
+            filter: blur(10px);
+            transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+
+            img {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+                border-radius: 10px;
+            }
+        }
+
+        .register-image.animate {
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0);
+        }
+    }
+}
+
+// Media Queries for Responsive Design
+@media (max-width: 1200px) {
+    .register {
+        .register-left {
+            .register-card {
+                gap: 15px;
+                padding: 15px;
+
+                h1 {
+                    font-size: 2rem;
+                }
+
+                form {
+                    gap: 10px;
+
+                    label {
+                        font-size: 1.1rem;
+                    }
+
+                    input {
+                        padding: 10px;
+                        font-size: 0.9rem;
+                    }
+
+                    button {
+                        padding: 8px 16px;
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .register-back {
+                    gap: 8px;
+
+                    span {
+                        font-size: 0.9rem;
+                    }
+
+                    a {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .go-back {
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .register-right {
+            .register-image {
+                padding: 15px;
+
+                img {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .register {
+        flex-direction: column;
+        align-items: center;
+
+        .register-left {
+            .register-card {
+                gap: 10px;
+                padding: 10px;
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+                form {
+                    gap: 8px;
+
+                    label {
+                        font-size: 1rem;
+                    }
+
+                    input {
+                        padding: 8px;
+                        font-size: 0.9rem;
+                    }
+
+                    button {
+                        padding: 8px 14px;
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .register-back {
+                    gap: 6px;
+
+                    span {
+                        font-size: 0.8rem;
+                    }
+
+                    a {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .go-back {
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .register-right {
+            .register-image {
+                padding: 10px;
+
+                img {
+                    max-width: 350px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .register {
+        .register-left {
+            .register-card {
+                gap: 8px;
+                padding: 8px;
+
+                h1 {
+                    font-size: 1.6rem;
+                }
+
+                form {
+                    gap: 6px;
+
+                    label {
+                        font-size: 0.9rem;
+                    }
+
+                    input {
+                        padding: 6px;
+                        font-size: 0.8rem;
+                    }
+
+                    button {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .register-back {
+                    gap: 4px;
+
+                    span {
+                        font-size: 0.7rem;
+                    }
+
+                    a {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                .go-back {
+                    a {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+
+        .register-right {
+            .register-image {
+                padding: 5px;
+
+                img {
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .register {
+        .register-left {
+            .register-card {
+                gap: 6px;
+                padding: 6px;
+
+                h1 {
+                    font-size: 1.4rem;
+                }
+
+                form {
+                    gap: 2px;
+
+                    label {
+                        font-size: 0.8rem;
+                    }
+
+                    input {
+                        padding: 4px;
+                        font-size: 0.7rem;
+                    }
+
+                    button {
+                        padding: 4px 10px;
+                        font-size: 0.7rem;
+                    }
+                }
+
+                .register-back {
+                    gap: 2px;
+
+                    span {
+                        font-size: 0.6rem;
+                    }
+
+                    a {
+                        font-size: 0.6rem;
+                    }
+                }
+
+                .go-back {
+                    a {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        .register-right {
+            .register-image {
+                padding: 3px;
+
+                img {
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+}
+

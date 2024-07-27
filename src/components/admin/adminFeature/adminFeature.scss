@@ -1,0 +1,105 @@
+.adminFeature {
+    color: #fff;
+    font-family: Arial, sans-serif;
+  
+    .adminFeatureContainer {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+  
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: red; 
+      }
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+  
+        thead {
+          tr {
+            th {
+              padding: 10px;
+              text-align: left;
+              border-bottom: 2px solid red;
+              font-size: 18px;
+              color: red
+            }
+          }
+        }
+  
+        tbody {
+          tr {
+            &:nth-child(odd) {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+            &:nth-child(even) {
+              background-color: rgba(255, 255, 255, 0.05);
+            }
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.2);
+            }
+            td {
+              padding: 10px;
+              border-bottom: 1px solid #444;
+              font-size: 16px;
+            }
+  
+            .button-edit, .button-delete {
+              
+                button {
+                    background: none;
+                    border: none;
+                    color: #f0a500;
+                    cursor: pointer;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                }
+  
+              &:hover {
+                text-decoration: underline;
+              }
+  
+              svg {
+                margin-right: 5px;
+              }
+            }
+
+            .button-delete {
+                button {
+                    color: #ff4d4d;
+                }
+            }
+          }
+        }
+      }
+  
+      .table-add-button {
+        text-align: right;
+        padding: 10px;
+  
+        button {
+          background-color: #ff4d4d;
+          color: #000;
+          border: none;
+          padding: 10px 15px;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+  
+          &:hover {
+            background-color: red;
+          }
+  
+          svg {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  

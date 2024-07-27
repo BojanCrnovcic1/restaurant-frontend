@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .aboutAs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    z-index: 1;
+  
+    .about-left,
+    .about-right {
+      flex: 1;
+  
+      .about-left-text,
+      .about-right-text {
+        transform: translateX(-300px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+  
+        p {
+          padding-left: 20px;
+          font-size: 1.4rem;
+          font-family: cursive;
+          color: silver;
+        }
+      }
+  
+      .about-left-text.animate,
+      .about-right-text.animate {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    .about-center {
+      flex: 1;
+  
+      .about-image {
+        opacity: 0;
+        transform: scale(0.8);
+        filter: blur(10px);
+        transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+  
+        img {
+          height: 500px;
+          width: 500px;
+          padding-left: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          border-radius: 10px;
+        }
+      }
+  
+      .about-image.animate {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+      }
+    }
+  
+    @media (max-width: 1200px) {
+      .about-left-text p,
+      .about-right-text p {
+        font-size: 1.2rem;
+      }
+  
+      .about-center .about-image img {
+        height: 400px;
+        width: 400px;
+      }
+    }
+  
+    @media (max-width: 992px) {
+      .about-left-text p,
+      .about-right-text p {
+        font-size: 1rem;
+      }
+  
+      .about-center .about-image img {
+        height: 350px;
+        width: 350px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+  
+      .about-left-text p,
+      .about-right-text p {
+        padding-left: 0;
+        font-size: 0.9rem;
+      }
+  
+      .about-center .about-image img {
+        height: 300px;
+        width: 300px;
+        padding-left: 0;
+      }
+  
+      .about-left-text,
+      .about-right-text {
+        transform: translateY(-300px);
+      }
+  
+      .about-left-text.animate,
+      .about-right-text.animate {
+        transform: translateY(0);
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .about-left-text p,
+      .about-right-text p {
+        font-size: 0.8rem;
+      }
+  
+      .about-center .about-image img {
+        height: 250px;
+        width: 250px;
+      }
+    }
+  
+    @media (max-width: 400px) {
+      .about-left-text p,
+      .about-right-text p {
+        font-size: 0.7rem;
+      }
+  
+      .about-center .about-image img {
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+  
+  

@@ -1,0 +1,136 @@
+.adminFoods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+    min-height: 100vh;
+
+    .adminFoodsContainer {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+        width: 100%;
+        max-width: 1200px;
+
+        h2 {
+            display: flex;
+            align-items: center;
+            font-size: 2.5rem;
+            color: #17a2b8;
+            margin-bottom: 20px;
+
+            svg {
+                margin-right: 10px;
+                color: #17a2b8;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+
+            thead {
+                tr {
+                    background-color: #343a40;
+                    color: #fff;
+
+                    th {
+                        padding: 15px;
+                        font-size: 1.2rem;
+                        text-align: left;
+
+                        &.table-add-button {
+                            text-align: right;
+                        }
+                    }
+
+                    .table-add-button {
+                        button {
+                            background-color: #17a2b8;
+                            color: #fff;
+                            border: none;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            transition: background-color 0.3s;
+
+                            &:hover {
+                                background-color: #138496;
+                            }
+
+                            svg {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    &:nth-child(even) {
+                        background-color: #343a40;
+                        color: #f2f2f2;
+                    }
+
+                    &:hover {
+                        background-color: silver;
+                        color: #343a40;
+                    }
+
+                    td {
+                        padding: 15px;
+                        font-size: 1rem;
+
+                        &.text-right {
+                            text-align: right;
+                        }
+
+                        &.text-centar {
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
+                        a {
+                            color: #17a2b8;
+                            text-decoration: none;
+                            transition: color 0.3s;
+
+                            &:hover {
+                                color: #138496;
+                            }
+
+                            svg {
+                                margin-right: 5px;
+                            }
+                        }
+
+                        &.edit-button button, &.delete-button button {
+                            background-color: transparent;
+                            border: none;
+                            color: #20c6e0; 
+                            cursor: pointer;
+                            font-size: 1rem;
+                            transition: color 0.3s;
+
+                            &:hover {
+                                color: blue; // Narančasta
+                            }
+
+                            svg {
+                                margin-right: 5px;
+                            }
+                        }
+
+                        &.delete-button button:hover {
+                            color: #d32f2f; // Crvena
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

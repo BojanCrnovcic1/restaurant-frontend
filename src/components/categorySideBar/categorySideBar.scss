@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.category-side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 300px;
+    padding: 30px 20px;
+    border-right: 1px solid silver;
+    height: 100vh;
+    overflow-y: auto; /* Change from scroll to auto to avoid unnecessary scrollbars */
+
+    h2 {
+        font-size: 3rem;
+        font-style: italic;
+        color: silver;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 10px;
+        width: 100%;
+
+        li {
+            font-size: 1.5rem;
+            color: goldenrod;
+            padding: 10px 0;
+            font-style: italic;
+            font-weight: bold;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer; /* Add cursor pointer for better UX */
+
+            &:hover {
+                transform: translateX(5px);
+                opacity: 0.7;
+            }
+
+            a {
+                text-decoration: none;
+                color: goldenrod;
+                width: 100%;
+                display: block; /* Make link fill the entire li for easier clicking */
+            }
+        }
+
+        opacity: 0; 
+        animation: fadeIn 2.4s forwards; 
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0); 
+            }
+        }
+    }
+}
+
+.category-side-bar::-webkit-scrollbar {
+    width: 4px;
+}
+
+// Media Queries for Responsive Design
+@media (max-width: 1200px) {
+    .category-side-bar {
+        width: 250px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        ul {
+            li {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .category-side-bar {
+        width: 200px;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        ul {
+            li {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .category-side-bar {
+        width: 150px;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            li {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .category-side-bar {
+        width: 190px;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid silver;
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        ul {
+            li {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

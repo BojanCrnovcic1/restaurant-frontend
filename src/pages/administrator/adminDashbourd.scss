@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    .adminDashbourd {
+        display: flex;
+        flex-direction: row;
+
+        .adminMainContent {
+            padding: 10px;
+            width: 100%;
+            height: 100vh;
+            overflow: scroll;
+
+            .content {
+                .placeholder {
+                    width: 100%;
+                    max-width: 400px; 
+                    margin: 0 auto;
+                    padding-top: 100px;
+                    display: block;
+                    border-radius: 20px;
+                    animation: pulse 2s infinite;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    img {
+                         width: 600px;
+                         height: 500px;
+                   
+                }    
+                }
+            }
+        }
+        .adminMainContent::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .go-back {
+            width: 160px;
+    
+            a {
+              font-size: 1.7rem;
+              font-style: italic;
+              text-decoration: none;
+              margin-top: 30px;
+              color: goldenrod;
+    
+              &:hover {
+                color: silver;
+                font-size: 1.7rem;
+              }
+            }
+          }
+    }
+}

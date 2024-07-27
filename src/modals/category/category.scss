@@ -1,0 +1,94 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  
+    &.hide {
+      display: none;
+    }
+  
+    .modal-container {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 8px;
+      width: 400px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+  
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 18px;
+  
+        &:hover {
+          color: #ff4d4d;
+        }
+      }
+  
+      h2 {
+        color: #f0a500;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+  
+      .modal-card {
+        form {
+          display: flex;
+          flex-direction: column;
+  
+          label {
+            color: #fff;
+            margin-bottom: 5px;
+            font-size: 14px;
+          }
+  
+          input, select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            color: #fff;
+            font-size: 14px;
+  
+            &:focus {
+              border-color: #f0a500;
+              outline: none;
+            }
+          }
+  
+          button {
+            background-color: #f0a500;
+            color: #000;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            &:hover {
+              background-color: #cc8500;
+            }
+  
+            svg {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
