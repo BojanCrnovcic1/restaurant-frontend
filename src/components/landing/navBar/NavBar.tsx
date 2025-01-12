@@ -12,6 +12,11 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Funkcija za zatvaranje menija
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className='navBar'>
       <div className='navBar-left'>
@@ -21,19 +26,19 @@ const NavBar = () => {
       <div className='navBar-right'>
         <div className={`navBar-links ${isMenuOpen ? 'active' : ''}`}>
           <ul>
-            <li className='list-menu'><Link to={'/menu'}>Menu</Link></li>
-            <li className='list-about'><a href='#about'>About</a></li>
-            <li className='list-chef'><a href='#chef'>Chef</a></li>
-            <li className='list-laurels'><a href='#laurels'>Laurels</a></li>
+            <li className='list-menu'><Link to={'/menu'} onClick={closeMenu}>Menu</Link></li>
+            <li className='list-about'><a href='#about' onClick={closeMenu}>About</a></li>
+            <li className='list-chef'><a href='#chef' onClick={closeMenu}>Chef</a></li>
+            <li className='list-laurels'><a href='#laurels' onClick={closeMenu}>Laurels</a></li>
             {role === 'user' ? (
               <>
-                <li className='list-logout'><a href='#' onClick={logout}>Logout</a></li>
+                <li className='list-logout'><a href='#' onClick={() => { closeMenu(); logout(); }}>Logout</a></li>
                 <li className='list-cart'><Cart /></li>
               </>
             ) : (
               <>
-                <li className='list-login'><Link to={'/login'}>Login</Link></li>
-                <li className='list-register'><Link to={'/register'}>Register</Link></li>
+                <li className='list-login'><Link to={'/login'} onClick={closeMenu}>Login</Link></li>
+                <li className='list-register'><Link to={'/register'} onClick={closeMenu}>Register</Link></li>
               </>
             )}
           </ul>

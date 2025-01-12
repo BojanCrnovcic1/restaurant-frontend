@@ -1,7 +1,6 @@
 import React from 'react';
 import './singleFoodPreview.scss';
 import { FoodType } from '../../types/FoodType';
-import { ApiConfig } from '../../config/api.config';
 import { useAuth } from '../../context/AuthContext';
 import AddToCart from '../addToCart/AddToCart';
 
@@ -18,7 +17,7 @@ const SingleFoodPreview: React.FC<Props> = ({ food }) => {
         <h3>{food.name}</h3>
         <div className='food-info'>
         {imagePath ? (
-            <img src={ApiConfig.PHOTO_PATH + imagePath} alt={`Food ${food.foodId}`} />
+            <img src={imagePath} alt={`Food ${food.foodId}`} />
           ) : (
             <div className='info-image'>No image available</div>
           )}

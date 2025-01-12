@@ -82,6 +82,7 @@ const AddFood: React.FC<AddFoodProps> = ({ show, handleClose }) => {
                 setFeatures([]); 
                 setSelectedFeatures([]);
             }
+            handleClose();
         } catch (error) {
             setMessage("Failed to add food.");
             console.error('Failed to add food', error);

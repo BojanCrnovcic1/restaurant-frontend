@@ -87,7 +87,7 @@ const AdminPhoto = () => {
                 <div className='photo-section'>
                     {lastPhoto ? (
                         <>
-                            <img src={ApiConfig.PHOTO_PATH + lastPhoto.imagePath} alt={"Photo " + lastPhoto.photoId} />
+                            <img src={lastPhoto.imagePath} alt={"Photo " + lastPhoto.photoId} />
                             <button onClick={handleDeletePhoto}><FontAwesomeIcon icon={faMinus} /> Delete photo</button>
                         </>
                     ) : (

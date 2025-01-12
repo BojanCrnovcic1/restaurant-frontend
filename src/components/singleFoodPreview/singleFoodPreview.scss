@@ -1,276 +1,154 @@
 .food-container {
-    padding: 1rem;
-    flex: 1;
-    background-color: rgba(11, 9, 10, 0.8);
-    border-radius: 10px; // Add border radius for rounded corners
-  
-    h3 {
-      margin-top: 0;
-      font-size: 2.7rem;
-      color: goldenrod;
-      font-style: italic;
+  padding: 1rem;
+  background-color: rgba(11, 9, 10, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Dodajemo senku za moderniji izgled */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efekat pri hover-u */
+
+  &:hover {
+    transform: scale(1.05); /* Blagi efekat povećanja pri hover-u */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 2.2rem; /* Manja veličina za kompaktne kartice */
+    color: goldenrod;
+    font-style: italic;
+  }
+
+  .food-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 1rem;
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px; /* Zaobljeni uglovi slike */
     }
-  
-    .food-info {
+
+    .info-image {
+      width: 100%;
+      height: 150px;
+      border: 1px solid rgb(206, 202, 202);
       display: flex;
-      flex-direction: row;
-      margin-top: 0.5rem;
-      padding-top: 20px;
-      gap: 30px;
-  
-      img {
-        width: 180px;
-        height: 160px;
-        object-fit: cover;
-        margin-right: 1rem;
-      }
-  
-      .info-image {
-        width: 180px;
-        height: 160px;
-        border: 1px solid rgb(206, 202, 202);
-        margin-right: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-  
-      .food-text {
-        flex: 1;
-        max-width: 300px;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-  
-        .food-p {
-          height: 140px;
-          overflow: auto;
-  
-          p {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: silver;
-            padding-bottom: 20px;
-          }
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px; /* Zaobljeni uglovi */
+    }
+
+    .food-text {
+      text-align: center;
+
+      .food-p {
+        height: auto;
+        overflow: hidden;
+
+        p {
+          font-size: 1.2rem;
+          font-style: italic;
+          color: silver;
         }
-  
-        .food-p::-webkit-scrollbar {
-          width: 3px;
-        }
-  
-        .food-feature {
-          height: 180px;
-          overflow: auto;
-          background-color: rgba(16, 15, 15, 0.6);
-          border-radius: 10px;
-  
-          ul {
-            li {
-              span {
-                font-size: 0.9rem;
-                font-style: italic;
-                color: rgb(152, 149, 149);
-                padding: 20px;
-              }
+      }
+
+      .food-feature {
+        height: auto;
+        overflow: hidden;
+        background-color: rgba(16, 15, 15, 0.6);
+        border-radius: 10px;
+
+        ul {
+          li {
+            span {
+              font-size: 0.9rem;
+              font-style: italic;
+              color: rgb(152, 149, 149);
             }
           }
         }
-  
-        .food-feature::-webkit-scrollbar {
-          width: 3px;
-          background: black;
-        }
-      }
-    }
-  
-    .food-price-add-button {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding-top: 20px;
-  
-      .food-price {
-        margin-top: 0.5rem;
-        padding-top: 30px;
-        color: silver;
-        font-size: 2rem;
-        font-style: italic;
-        border-top: 1px solid silver;
-      }
-  
-      .add-button {
-        align-items: center;
-  
-        button {
-          padding: 10px 20px;
-          background-color: black;
-          color: gold;
-          border: 2px solid gold;
-          font-size: 16px;
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          border-radius: 5px;
-          transition: background-color 0.3s, color 0.3s;
-          cursor: pointer;
-        }
-  
-        button:hover {
-          background-color: gold;
-          color: black;
-        }
       }
     }
   }
-  
-  // Media Queries for Responsive Design
-  @media (max-width: 1200px) {
-    .food-info {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-  
-      .food-text {
-        max-width: 100%;
-      }
-  
-      img {
-        width: 150px;
-        height: 130px;
-      }
+
+  .food-price-add-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+
+    .food-price {
+      color: silver;
+      font-size: 1.6rem;
+      font-style: italic;
     }
-  
-    .food-price-add-button {
-      flex-direction: column;
-      align-items: center;
-  
-      .food-price {
-        font-size: 1.6rem;
-        padding-top: 10px;
+
+    .add-button {
+      button {
+        padding: 10px 15px;
+        background-color: black;
+        color: gold;
+        border: 2px solid gold;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
       }
-  
-      .add-button {
-        margin-top: 10px;
+
+      button:hover {
+        background-color: gold;
+        color: black;
       }
     }
   }
-  
-  @media (max-width: 992px) {
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .food-container {
+    padding: 0.8rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+
     .food-info {
-      .food-text {
-        max-width: 100%;
-      }
-  
       img {
-        width: 130px;
-        height: 110px;
+        height: 120px;
       }
     }
-  
+
     .food-price-add-button {
+      flex-direction: column;
       .food-price {
         font-size: 1.4rem;
       }
-  
-      .add-button {
-        button {
-          font-size: 14px;
-        }
-      }
     }
   }
-  
-  @media (max-width: 768px) {
-    .food-container {
-      padding: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .food-container {
+    padding: 0.5rem;
+
+    h3 {
+      font-size: 1.8rem;
     }
-  
+
     .food-info {
-      .food-text {
-        max-width: 100%;
-      }
-  
       img {
-        width: 120px;
         height: 100px;
       }
     }
-  
+
     .food-price-add-button {
-      flex-direction: column;
-      align-items: center;
-  
       .food-price {
         font-size: 1.2rem;
       }
-  
-      .add-button {
-        button {
-          font-size: 12px;
-        }
-      }
     }
   }
-  
-  @media (max-width: 576px) {
-    .food-container {
-      padding: 0.5rem;
-    }
-  
-    .food-info {
-      .food-text {
-        max-width: 100%;
-      }
-  
-      img {
-        width: 100px;
-        height: 80px;
-      }
-    }
-  
-    .food-price-add-button {
-      .food-price {
-        font-size: 1rem;
-      }
-  
-      .add-button {
-        button {
-          font-size: 12px;
-          padding: 8px 16px;
-        }
-      }
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .food-container {
-      padding: 0.5rem;
-    }
-  
-    .food-info {
-      .food-text {
-        max-width: 100%;
-      }
-  
-      img {
-        width: 80px;
-        height: 60px;
-      }
-    }
-  
-    .food-price-add-button {
-      .food-price {
-        font-size: 0.9rem;
-      }
-  
-      .add-button {
-        button {
-          font-size: 10px;
-          padding: 6px 12px;
-        }
-      }
-    }
-  }
-  
+}
