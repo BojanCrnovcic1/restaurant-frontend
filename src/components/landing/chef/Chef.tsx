@@ -11,7 +11,7 @@ const Chef = () => {
     <div className='chef' id='chef'>
       <div className='chef-left'>
         <div ref={ref} className={`chef-image ${inView ? 'animate' : ''}`}>
-          <img src="src/assets/chef.png" alt="Chef" />
+          <img src="/assets/chef.png" alt="Chef" />
         </div>
       </div>
       <div className='chef-right'>

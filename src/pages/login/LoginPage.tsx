@@ -28,7 +28,7 @@ const LoginPage = () => {
     <div className='login'>
         <div className='login-left'>
             <div ref={ref} className={`login-image ${inView ? 'animate' : ''}`}>
-                <img src="src/assets/login.png" alt="" />
+                <img src="/assets/login.png" alt="" />
             </div>
         </div>
         <div className='login-right'>

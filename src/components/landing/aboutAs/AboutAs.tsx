@@ -17,7 +17,7 @@ const AboutAs = () => {
       </div>
       <div className='about-center'>
         <div ref={centerRef} className={`about-image ${centerInView ? 'animate' : ''}`}>
-          <img src="src/assets/findus.png" alt="" />
+          <img src="/assets/findus.png" alt="" />
         </div>
       </div>
       <div className='about-right'>

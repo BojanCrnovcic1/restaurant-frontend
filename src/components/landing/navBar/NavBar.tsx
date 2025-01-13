@@ -20,7 +20,7 @@ const NavBar = () => {
   return (
     <div className='navBar'>
       <div className='navBar-left'>
-        <img src="src/assets/logo.png" alt="Restaurant Logo" />
+        <img src="/assets/logo.png" alt="Restaurant Logo" />
         <h1><a href='#header'>Restaurant</a></h1>
       </div>
       <div className='navBar-right'>

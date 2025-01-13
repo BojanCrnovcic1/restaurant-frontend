@@ -29,7 +29,7 @@ const Menu: React.FC = () => {
               <Outlet />
             ) : (
               <div className='first-message'>
-                  <img src="src/assets/menu-pic.png" alt="Placeholder" className="placeholder-image" />
+                  <img src="/assets/menu-pic.png" alt="Placeholder" className="placeholder-image" />
                   <h4>Explore our menu</h4>
               </div>
             )}

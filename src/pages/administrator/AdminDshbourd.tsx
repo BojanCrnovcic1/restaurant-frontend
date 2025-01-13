@@ -16,7 +16,7 @@ const AdminDashbourd = () => {
          <div className='content'>
           {isDashbourdPath ? (
                <div className='placeholder'>
-                   <img src='/src/assets/food-admin-service.jpg' alt='Placeholder' />
+                   <img src='/assets/food-admin-service.jpg' alt='Placeholder' />
                </div>
            ) : (
                <Outlet />

@@ -117,7 +117,7 @@ const RegisterPage = () => {
       </div>
       <div className='register-right'>
         <div ref={ref} className={`register-image ${inView ? 'animate' : ''}`}>
-          <img src="src/assets/register.png" alt="" />
+          <img src="/assets/register.png" alt="" />
         </div>
       </div>
     </div>

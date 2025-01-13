@@ -22,7 +22,7 @@ const Video = () => {
         <div className="video">
           <video
             ref={vidRef as MutableRefObject<HTMLVideoElement>}
-            src="/src/assets/meal.mp4"
+            src="/assets/meal.mp4"
             loop
             controls={false}
             muted
